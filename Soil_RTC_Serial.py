@@ -18,6 +18,9 @@ ss = Seesaw(i2c_bus, addr=0x36)
 # myI2C = busio.I2C(board.SCL, board.SDA)
 rtc = adafruit_pcf8523.PCF8523(i2c_bus)
 
+# Note above, could not just merge rtc and soil scripts. They call/addr i2c differnetly
+# But if we just point RTC at soil setup , that works.
+
 while True:
     # Read moisture level through capacitive touch pad
     touch = ss.moisture_read()
