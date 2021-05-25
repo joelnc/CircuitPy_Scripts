@@ -1,0 +1,47 @@
+#+TAGS: H Tech CMS health someday SS schmoo ru BHours
+#+STARTUP: hidestars
+
+* Get the uf2 circuitpython bundle from circutipython website
+
+* Load onto feather
+** Plug in usb-c
+** Then double click reset button
+** Wokred on win, mounted as RPi-Rp or something
+*** On linux, did not auto load
+*** Maybe manual mount and then proceed?
+*** I did not actually run fdisk on the bare board, so maybe it wiil work
+** Copy the uf2 bundle to the feahter. It shoudl then show up as CIRCUITPY in devices
+   
+
+* Install mu editor 
+** pip3 install mu-edi... something.
+** To run on non-root, go into admin and add tty to user priv
+** NOTE... started to lauchn in root before thinking better/aborting. Possible that 
+** is what resolved
+ 
+* Projects
+** So far RTC via adafruit
+*** Need to put req libraires onto the feeather.  
+*** The full bundle is in downloads at the moment, only copied over the 3 needed for RTC
+*** Via mu, copy paste RTC program worked.
+**** Then swtiched flag to true, set time, disconnected, seemed to track time.  Yay!
+**** For that i think the next change initiates a rerun. So 
+***** Set clock with True, actual time
+***** Let it run however long on serial to monitor. 
+***** Then edit file to False, no need to adjust time
+***** It will then keep printing to serial but not reset clock time
+***** Sort of makes sense
+ 
+** Soil serial
+*** Bum sensor! Would have worked right away but one of the ones won't read, other 2 are fine
+*** Headers onto screen, then can play with SD card, RTC, screen, combined prog to dispaly and write
+*** 
+
+** Confusing though
+*** do all progs need to be named code.py?
+**** NO- Code.py can just import whatever the meanifully names script actaully is.
+*** Emacs edit on device vs local and copy?
+**** YES- Either dired /run/media/joel/CircuitPy/
+*** Guessing makes sense to ... use meaingful names local, 
+*** THEN save as /code.py on device to run
+*** In that case, can run standard git repo for code.
