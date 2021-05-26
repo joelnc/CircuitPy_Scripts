@@ -1,6 +1,14 @@
 # SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
 # SPDX-License-Identifier: MIT
 
+# Wow... serial prints to oled wihtout any code needed!
+## Then not workking, then working.. fishy
+## Toggle between screen-Test and then SerialRTC SOIl kicked screen on..
+## Got it maybe.  need to run the screen_test first, then soil serial
+##... and then soil is sent to screen.
+
+# Set up stand alone 
+
 import time # RTC
 import busio # Soil
 import adafruit_pcf8523 # Soil
@@ -32,7 +40,7 @@ while True:
     t = rtc.datetime
 
     # Print datetime, data
-    print("DT: %d/%d/%d  %d:%02d:%02d " % (t.tm_mon, t.tm_mday, t.tm_year, t.tm_hour, t.tm_min, t.tm_sec) +
+    print("%d/%d/%d  %d:%02d:%02d " % (t.tm_mon, t.tm_mday, t.tm_year, t.tm_hour, t.tm_min, t.tm_sec) +
           "temp: " + str(temp) + "  moisture: " + str(touch))
 
     # print("temp: " + str(temp) + "  moisture: " + str(touch))
