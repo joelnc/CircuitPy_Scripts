@@ -1,4 +1,4 @@
-#+TAGS: H Tech CMS health someday SS schmoo ru BHours
+#+TAGS: H Tech CMS 
 #+STARTUP: hidestars
 
 * Get the uf2 circuitpython bundle from circutipython website
@@ -21,7 +21,7 @@
 * Projects
 ** So far RTC via adafruit
 *** Need to put req libraires onto the feather.  
-*** The full bundle is in downloads at the moment, only copied over the 3 needed for RTC
+*** The full bundle is in CiryPY repo (ig), only copied over the 3 needed for RTC
 *** Via mu, copy paste RTC program worked.
 **** Then swtiched flag to true, set time, disconnected, seemed to track time.  Yay!
 **** For that I think the next change initiates a rerun. So 
@@ -33,7 +33,8 @@
  
 ** Soil serial
 *** Bum sensor! Would have worked right away but one of the ones won't read, other 2 are fine
-*** NXT Headers onto screen, then can play with SD card, RTC, screen, combined prog to dispaly and write
+*** DONE Headers onto screen, then can play with SD card, RTC, screen, combined prog to dispaly and write
+    CLOSED: [2021-05-26 Wed 11:39]
 
 
 ** Confusing though
