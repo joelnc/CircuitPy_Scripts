@@ -1,12 +1,7 @@
 # SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
 # SPDX-License-Identifier: MIT
 
-# Wow... serial prints to oled wihtout any code needed!
-# A bit weird though.. need run the screen_test first, then soil serial
-#... and then soil is sent to screen.
-
-# Set up stand alone
-
+# Set up stand alone version
 import board
 
 import time # RTC
